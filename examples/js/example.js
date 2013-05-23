@@ -1,7 +1,6 @@
 var bee_example = {
 
   'init': function(){
-    //var url = 'http://localhost:8000/api/photos/?format=json';
     var url = 'http://ecoengine.berkeley.edu/api/photos/?format=json';
 
     $.ajax({
@@ -19,7 +18,6 @@ var bee_example = {
 
   }
 }
-
 
 $(document).ready(
   function(){
