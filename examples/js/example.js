@@ -10,7 +10,7 @@ var bee_example = {
       data: 'authors=Wieslander&page_size=30',
       success: function(data){
         $.each(data.features, function(i, f) {
-          line = ''.concat('<li><a href="http:///', f.properties.media_url, '">', f.properties.record, '</a></li>')
+          line = ['<li><a href="', f.properties.media_url, '">', f.properties.record, '</a></li>'].join('')
           $('ul').append(line)
         });
       }

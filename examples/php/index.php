@@ -20,7 +20,7 @@
     $obj = json_decode($json);
 
     foreach ($obj -> features as $feature) {
-        $line = '<li><a href="http://"'.$feature -> properties -> media_url.'">';
+        $line = '<li><a href="'.$feature -> properties -> media_url.'">';
         $line .= $feature -> properties -> record.'</li>';
         echo $line;
     }
