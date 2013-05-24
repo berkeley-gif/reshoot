@@ -1,4 +1,4 @@
-addmap = {
+mapexample = {
   'url': 'http://ecoengine.berkeley.edu/api/photos/?format=json',
 
   // create map object and attach to div with id="map"
@@ -15,7 +15,7 @@ addmap = {
           html = ['<div width="200px"><img class="small_image" src="', feature.properties.media_url, '" width="200px"/></div>'].join('')
           layer.bindPopup(html);
         }}
-      ).addTo(addmap.map)
+      ).addTo(mapexample.map)
     },
 
   'ld': function() {
@@ -23,10 +23,10 @@ addmap = {
     $.ajax({
     dataType: "json",
     contentType: "application/json",
-    url: addmap.url,
+    url: mapexample.url,
     data: 'authors=Wieslander&page_size=30',
     success: function(d) {
-        addmap.add_to_map(d);
+        mapexample.add_to_map(d);
       }
     });
   },
@@ -37,14 +37,14 @@ addmap = {
       attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>'
     });
     // add base layer
-    baselayer.addTo(addmap.map);
+    baselayer.addTo(mapexample.map);
     // run other functions in this example in order to add baselayer
-    addmap.ld()
+    mapexample.ld()
   }
 };
 
 $(document).ready(
   function(){
-    addmap.init()
+    mapexample.init()
   }
 )
