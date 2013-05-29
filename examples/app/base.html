@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Retakes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.css">
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!--<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">-->
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="row">
+        <div class="span4">
+          <h3>Filters</h3>
+          <p>location</p>
+          <p>accessibility</p>
+          <p>reshootability</p>
+          <p>time/year (may use a time slider)</p>
+          <p>is there any reshoot?</p>
+          <p>photographer</p>
+          <p>species</p>
+          <form>
+            <fieldset>
+              <legend>Filters</legend>
+              <label>County</label>
+              <input type="text" placeholder="Trinity">
+              <span class="help-block">helpful text here...</span>
+              <button type="submit" class="btn">Submit</button>
+            </fieldset>
+          </form>
+        </div>
+
+        <div class="tabbable span8">
+          <ul class="nav nav-tabs">
+            <li class="active nav-links">
+            <a href="#tab-map" data-toggle="tab">Map</a>
+            </li>
+            <li class="nav-links"><a href="#tab-grid" data-toggle="tab">Grid</a></li>
+          </ul>
+          <div class="tab-content">
+            <div id="tab-map" class="tab-pane active">
+              <div id="map"></div>
+              <!--<img src="about:blank" width=250 class="hide img-polaroid">-->
+              <!--<div class="thumbnail hide">-->
+                <!--<img data-src="holder.js/300x200" alt="">-->
+              <!--</div>-->
+            </div>
+            <div id="tab-grid" class="tab-pane">
+              showing a grid of photos
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- /container -->
+    <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.js"></script>
+    <script src="http://coffeescript.org/extras/coffee-script.js"></script>
+    <script src="app.coffee" type="text/coffeescript" charset="utf-8"></script>
+  </body>
+</html>
